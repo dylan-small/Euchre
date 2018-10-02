@@ -5,7 +5,6 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.image.BufferStrategy;
 
@@ -53,11 +52,32 @@ public class Engine extends JFrame implements Runnable
 
 		bs = getBufferStrategy();
 		g = getGraphics();
+
+		GameState.setState(GameState.State.MENU);
 	}
 
 	public void tick()
 	{
-
+		//update different information based on game state
+		switch (GameState.getState())
+		{
+		case MENU:
+			break;
+		case CONNECT:
+			break;
+		case SERVER_START:
+			break;
+		case INSTRUCTIONS:
+			break;
+		case LICENSE:
+			break;
+		case GAME:
+			break;
+		case END:
+			break;
+		default:
+			break;
+		}
 	}
 
 	@Override
@@ -70,12 +90,31 @@ public class Engine extends JFrame implements Runnable
 			{
 				try
 				{
-					//obtain 2D graphics and set rendering hints
+					// obtain 2D graphics and set rendering hints
 					g2 = (Graphics2D) bs.getDrawGraphics();
 					g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-					//draw background
+					// draw background
 					setBackground(g2, Color.white);
-					
+					//draw different objects based on the current game state
+					switch (GameState.getState())
+					{
+					case MENU:
+						break;
+					case CONNECT:
+						break;
+					case SERVER_START:
+						break;
+					case INSTRUCTIONS:
+						break;
+					case LICENSE:
+						break;
+					case GAME:
+						break;
+					case END:
+						break;
+					default:
+						break;
+					}
 					
 				} catch (Exception e)
 				{
