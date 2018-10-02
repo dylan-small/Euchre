@@ -10,6 +10,8 @@ import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
+import com.dylanscode.game.Deck;
+
 public class Engine extends JFrame implements Runnable
 {
 
@@ -18,7 +20,8 @@ public class Engine extends JFrame implements Runnable
 	private Graphics g;
 	private BufferStrategy bs;
 	public static final int WIDTH = 800, HEIGHT = 800;
-
+	private Deck deck;
+	
 	public synchronized void start()
 	{
 		running = true;
@@ -54,6 +57,8 @@ public class Engine extends JFrame implements Runnable
 		g = getGraphics();
 
 		GameState.setState(GameState.State.MENU);
+		
+		deck = new Deck();
 	}
 
 	public void tick()
