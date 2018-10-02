@@ -1,5 +1,6 @@
 package com.dylanscode.game.server;
 
-public class Server {
+public class Server
+{
 
 }

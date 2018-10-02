@@ -1,5 +1,6 @@
 package com.dylanscode.game;
 
-public class Card {
+public class Card
+{
 
 }

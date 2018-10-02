@@ -1,5 +1,6 @@
 package com.dylanscode.game;
 
-public class Player {
+public class Player
+{
 
 }

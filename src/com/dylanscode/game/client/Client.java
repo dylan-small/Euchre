@@ -1,5 +1,6 @@
 package com.dylanscode.game.client;
 
-public class Client {
+public class Client
+{
 
 }

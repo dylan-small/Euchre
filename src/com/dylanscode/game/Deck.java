@@ -1,5 +1,6 @@
 package com.dylanscode.game;
 
-public class Deck {
+public class Deck
+{
 
 }
